@@ -2,9 +2,8 @@
 import React from 'react';
 import { StyleSheet, View, Text, Animated, Image, Easing, ImageBackground} from 'react-native';
 import CircleButton from 'react-native-circle-button';
-//import { WebView } from 'react-native-webview';
+import { WebView } from 'react-native-webview';
 import ViewShot from "react-native-view-shot";
-import { VLCPlayer, VlCPlayerView } from 'react-native-vlcplayer';
 
 class SplashScreen extends React.Component {
   constructor() {
@@ -96,12 +95,10 @@ export default class App extends React.Component {
 
 
 <ViewShot ref="viewShot" style={{ flex: 1}}>
-        <VLCPlayer
-           ref={ref => (this.vlcPlayer = ref)}
-           style={{marginTop:0,height:"100%",width:"100%"}}
-           source={{ uri:'rtsp://192.168.2.200:7070/webcam'}}
-               
-       />
+        <WebView
+           source={{ uri: 'http://192.168.43.200:8081/' }}
+            style={{marginTop:0,height:"100%",width:"100%"}}
+        />
         <View style={{position:'absolute',right:0,marginTop:155,marginRight:60,zIndex:1,height:50,width:50,opacity: 0.8}}>
         <CircleButton size={45}  primaryColor='#4cb0e4' secondaryColor='#66c87d' onPressButtonTop={this.botaoCima} onPressButtonBottom={this.botaoBaixo} onPressButtonRight={this.botaoDir} onPressButtonLeft={this.botaoEsq}/>
         </View>
