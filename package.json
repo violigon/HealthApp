@@ -1,0 +1,32 @@
+{
+  "name": "HealthApp",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest"
+  },
+  "dependencies": {
+    "react": "16.8.3",
+    "react-native": "^0.59.6",
+    "react-native-circle-button": "^1.0.9",
+    "react-native-gesture-handler": "^1.2.1",
+    "react-native-screenshot": "^1.0.0",
+    "react-native-view-shot": "^2.6.0",
+    "react-native-vlc-player": "git+https://github.com/kikill95/react-native-vlc-player.git",
+    "react-native-vlcplayer": "https://github.com/Nghi-NV/react-native-vlcplayer.git",
+    "react-native-webview": "^5.8.1",
+    "react-navigation": "^3.9.1"
+  },
+  "devDependencies": {
+    "@babel/core": "7.4.4",
+    "@babel/runtime": "7.4.4",
+    "babel-jest": "24.7.1",
+    "jest": "24.7.1",
+    "metro-react-native-babel-preset": "0.54.0",
+    "react-test-renderer": "16.8.3"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
