@@ -1,4 +1,6 @@
 rootProject.name = 'HealthApp'
+include ':react-native-view-shot'
+project(':react-native-view-shot').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-view-shot/android')
 include ':react-native-vlcplayer'
 project(':react-native-vlcplayer').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-vlcplayer/android')
 include ':react-native-webview'
