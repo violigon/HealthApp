@@ -329,8 +329,8 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         position: 'absolute',
-        width: 45,
-        height: 45,
+        width: size,
+        height: size,
         backgroundColor: '#4CB0E4',
         borderRadius: 360
     },
@@ -339,8 +339,8 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         position: 'absolute',
-        width: 45,
-        height: 45,
+        width: size,
+        height: size,
         backgroundColor: '#66C87D',
         borderRadius: 360
     },
