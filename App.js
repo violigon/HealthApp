@@ -25,14 +25,14 @@ class SplashScreen extends React.Component {
         Animated.timing(this.RotateValueHolder, {
             toValue: 1,
             duration: 3000,
-            easing: Easing.linear,
+            easing: Easing.linear
         }).start(() => this.StartImageRotateFunction());
     }
 
     render() {
         const RotateData = this.RotateValueHolder.interpolate({
             inputRange: [0, 1],
-            outputRange: ['0deg', '-360deg'],
+            outputRange: ['0deg', '-360deg']
         });
 
         return (
@@ -41,7 +41,7 @@ class SplashScreen extends React.Component {
                     style={{
                         width: 200,
                         height: 200,
-                        transform: [{rotate: RotateData}],
+                        transform: [{rotate: RotateData}]
                     }}
                     source={require('./Logo1.png')}
                 />
@@ -76,10 +76,6 @@ export default class App extends React.Component {
 
     onPressButtonTop = () => {
         console.log('Click Top');
-        console.log(this._viewShot == undefined);
-        console.log(this.refs == undefined);
-        console.log(this.refs.viewShot == undefined);
-        // console.log(this.vlcPlayer);
         // this.refs.viewShot.capture().then(uri => {
         //     console.log("do something with ", uri);
         // });
@@ -173,44 +169,44 @@ export default class App extends React.Component {
         return Animated.timing(obj, {
             toValue,
             duration,
-            easing: Easing.linear,
+            easing: Easing.linear
         }).start();
     }
 
     render() {
         const scaleMe = this.scaleAnimated.interpolate({
             inputRange: [0, 1],
-            outputRange: [size, size * 2.8],
+            outputRange: [size, size * 2.8]
         });
 
         const rotateMe = this.rotateAnimated.interpolate({
             inputRange: [0, 1, 2],
-            outputRange: ['0deg', '45deg', '0deg'],
+            outputRange: ['0deg', '45deg', '0deg']
         });
 
         const fadeInOut = this.fadeAnimated.interpolate({
             inputRange: [0, 1],
-            outputRange: [0, 1],
+            outputRange: [0, 1]
         });
 
         const bringMeToLeft = this.bringToLeftAnimated.interpolate({
             inputRange: [0, 1],
-            outputRange: [size - 5, 2],
+            outputRange: [size - 5, 2]
         });
 
         const bringMeToRight = this.bringToRightAnimated.interpolate({
             inputRange: [0, 1],
-            outputRange: [size - 5, 2],
+            outputRange: [size - 5, 2]
         });
 
         const bringMeToTop = this.bringToRightAnimated.interpolate({
             inputRange: [0, 1],
-            outputRange: [size - 5, 2],
+            outputRange: [size - 5, 2]
         });
 
         const bringMeToBottom = this.bringToRightAnimated.interpolate({
             inputRange: [0, 1],
-            outputRange: [size - 5, 2],
+            outputRange: [size - 5, 2]
         });
 
         if (this.state.isLoading) {
@@ -318,8 +314,7 @@ const styles = StyleSheet.create({
     circleContainer: {
         flex: 1,
         justifyContent: 'center',
-        alignItems: 'flex-end',
-        // marginRight: size / 2
+        alignItems: 'flex-end'
     },
     viewCenter: {
         flex: 1,
